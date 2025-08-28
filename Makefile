@@ -15,3 +15,5 @@ slides.pdf: slides.md template.tex
 
 clean:
 	rm -f ${SLIDES}
+	rm -f mermaid-filter.err
+	rm -f template.fdb_latexmk template.fls template.log

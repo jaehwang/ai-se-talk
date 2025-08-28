@@ -70,9 +70,9 @@ Effective prompting strategies for better code generation
 
 ## 1. Be Specific and Clear
 
-❌ **Bad**: "Make a function"
+**Bad**: "Make a function"
 
-👍 **Good**: "🐍 Create a Python function that validates email addresses using regex and returns True/False"
+**Good**: "Create a Python function that validates email addresses using regex and returns True/False"
 
 * Specify language, framework, and libraries
 * Define input/output types clearly
