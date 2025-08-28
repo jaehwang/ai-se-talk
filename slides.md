@@ -63,6 +63,26 @@ printf("Greetings ... to\n"); /* Hello, */
 #include <stdio.h>
 ```
 
+## Test가 마지막 보루
+
+Spec: Assignment `var = expression`
+
+```
+x = 1;             // OK
+y = 1 + "hello";   // AI can make code accept assignments we don't intend.
+```
+
+##  Requirements, Design, and Test
+
+
+## Iterate "Divide and Conquer
+
+* Implementation Specification
+* Plan with sub tasks
+
+## Memory Bank
+
+Remember where you are.
 
 ## How to Master AI Coding
 
@@ -125,3 +145,4 @@ Don't ask for an entire application at once
 * "Suggest optimizations for this slow function"
 
 ## 5. Iterative Refinement
+
