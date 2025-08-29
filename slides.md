@@ -18,6 +18,7 @@ header-includes:
 
 ## Hollerith Sorter
 
+![Hollerith Sorter](images/hh-tabulator.jpg)
 
 ## High Level Language
 

@@ -14,6 +14,8 @@ slides.pdf: slides.tex
 	xelatex slides.tex
 
 clean:
-	rm -f ${SLIDES} slides.tex
+	rm -f ${SLIDES} 
+	rm -f slides.tex slides.tex slides.aux slides.log slides.nav \
+		slides.snm slides.toc slides.vrb
 	rm -f mermaid-filter.err
-	rm -f template.fdb_latexmk template.fls template.log
+	rm -f template.fdb_latexmk template.fls template.log template.aux
