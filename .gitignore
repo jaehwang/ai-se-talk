@@ -1,7 +1,14 @@
 s5-11
 images
 mermaid-filter.err
+slides.tex
 slides.pdf
+slides.aux
+slides.log
+slides.nav
+slides.snm
+slides.toc
+slides.vrb
 slides.revealjs.html
 slides.s5.html
 template.fdb_latexmk

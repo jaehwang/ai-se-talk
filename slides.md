@@ -3,7 +3,21 @@ title: AI and Software Engineering
 subtitle: Higher Level Language, Prompt
 author: Jaehwang Kim
 date: September 3, 2025
+header-includes:
+  - |
+    \usebackgroundtemplate{%
+      \ifnum\thepage=1%
+        \includegraphics[width=\paperwidth,height=\paperheight]{images/cover.jpg}%
+      \else%
+        % 다른 페이지는 기본 배경
+      \fi
+    }
 ---
+
+## Bi Centennial Man
+
+## Hollerith Sorter
+
 
 ## High Level Language
 
