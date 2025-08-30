@@ -5,6 +5,7 @@ author: Jaehwang Kim
 date: September 3, 2025
 header-includes:
   - |
+    \usepackage{kotex}
     \usebackgroundtemplate{%
       \ifnum\thepage=1%
         \includegraphics[width=\paperwidth,height=\paperheight]{images/cover.jpg}%

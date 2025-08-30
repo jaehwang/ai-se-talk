@@ -7,11 +7,8 @@ all: ${SLIDES}
 slides.revealjs.html: slides.md
 	pandoc -t revealjs -s ${FILTER} -o $@ -V theme=moon slides.md
 
-slides.tex: slides.md template.tex
-	pandoc -t beamer ${FILTER} -V theme:Berlin --template template.tex --pdf-engine=xelatex -o $@ slides.md
-
-slides.pdf: slides.tex
-	xelatex slides.tex
+slides.pdf: slides.md template.tex
+	pandoc -t beamer ${FILTER} -V theme:Berlin --pdf-engine=xelatex -o $@ slides.md
 
 clean:
 	rm -f ${SLIDES} 
