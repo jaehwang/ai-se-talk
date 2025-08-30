@@ -5,6 +5,17 @@ author: Jaehwang Kim
 date: September 3, 2025
 header-includes:
   - |
+    ```{=revealjs}
+    <style>
+    .reveal {
+        font-size: 28px; /* 기본값은 보통 40px */
+    }
+    .reveal h1 { font-size: 2.5em; }
+    .reveal h2 { font-size: 2.11em; }
+    .reveal h3 { font-size: 1.55em; }
+    </style>
+    ```
+    ```{=latex}
     \usepackage{kotex}
     \usebackgroundtemplate{%
       \ifnum\thepage=1%
@@ -13,6 +24,7 @@ header-includes:
         % 다른 페이지는 기본 배경
       \fi
     }
+    ```
 ---
 
 ## Problem: 요구 사항
@@ -27,39 +39,40 @@ header-includes:
 | 4    | 최지은 | 28   | 158    | 52         |
 | 5    | 정대호 | 45   | 172    | 80         |
 
-## Solution: Hollerith Tabulating System
+## Solution: Gen AI & Prompt
 
-![Hollerith Tabulating System](images/hh-tabulator.jpg)
+나이, 키, 몸무게 데이터를 입력받아서 각각의 히스토그램을 그리는 파이썬 프로그램을 작성해주세요.
 
-## Solution: Prompt
-
-    나이, 키, 몸무게 데이터를 입력받아서 
-    각각의 히스토그램을 그리는 파이썬 프로그램을 작성해주세요.
-
-    ## 구간 요구사항:
-
+* 구간 요구사항:
     - 나이: 10세 단위 (0-9세, 10-19세, 20-29세, 30-39세, ...)
     - 키: 10cm 단위 (150-159cm, 160-169cm, 170-179cm, ...)
     - 몸무게: 10kg 단위 (40-49kg, 50-59kg, 60-69kg, ...)
-
-    ## 기술적 요구사항:
-
+* 기술적 요구사항:
     - matplotlib 사용하여 히스토그램 생성
-    - 3개의 서브플롯으로 각 변수 표시
     - 각 히스토그램에 구간 범위를 명확히 표시
+* Test Cases:
+    - ...
+  
+## Prompt: Higher Level Language?
 
-## Prompt: Higher Level Language
+- Prompt
+- Python, C/C++
+- Assembly 
+- Machine Code 
+- ...
 
-Prompt > C/C++ > Assembly > Machine Code > ...
+## Hollerith Tabulating System
 
-## Higher Level Language
-
-Natural language rather than programming language
-
-* Clear specification = Requirements definition
-* Providing examples = Test cases
-* Step-by-step explanation = Algorithm decomposition
-* Context management = Task decomposition
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+![1890: Hollerith Tabulating System](images/hh-tabulator.jpg)
+:::
+::: {.column width="50%"}
+- 1896\. Tabulating Machine Company
+- 1911\. CTR (Computing Tabulating Recording Company)
+- 1924\. IBM (International Business Machines)
+:::
+::::::::::::::
 
 ## Software Crisis
 
@@ -81,6 +94,15 @@ Complexity.
 * Software Architecture: Bridge between requirements and implementation
 * Agile Practices: CI/CD
 * ...
+
+## 좋은 프롬프트 작성 방법
+
+Natural language rather than programming language
+
+* Clear specification = Requirements definition
+* Providing examples = Test cases
+* Step-by-step explanation = Algorithm decomposition
+* Context management = Task decomposition
 
 ## AI for Software Engineering
 
