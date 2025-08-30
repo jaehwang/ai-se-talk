@@ -14,15 +14,51 @@ header-includes:
     }
 ---
 
-## Bi Centennial Man
+## Problem: 요구 사항
 
-## Hollerith Sorter
+나이, 키, 몸무게 데이터를 입력으로받아서 히스토그램을 출력한다.
 
-![Hollerith Sorter](images/hh-tabulator.jpg)
+| 순번 | 이름   | 나이 | 키(cm) | 몸무게(kg) |
+|------|--------|------|--------|------------|
+| 1    | 김철수 | 25   | 175    | 72         |
+| 2    | 이영희 | 32   | 162    | 55         |
+| 3    | 박민준 | 19   | 180    | 78         |
+| 4    | 최지은 | 28   | 158    | 52         |
+| 5    | 정대호 | 45   | 172    | 80         |
 
-## High Level Language
+## Solution: Hollerith Tabulating System
 
-C/C++ rather than assembly language
+![Hollerith Tabulating System](images/hh-tabulator.jpg)
+
+## Solution: Prompt
+
+    나이, 키, 몸무게 데이터를 입력받아서 
+    각각의 히스토그램을 그리는 파이썬 프로그램을 작성해주세요.
+
+    ## 구간 요구사항:
+
+    - 나이: 10세 단위 (0-9세, 10-19세, 20-29세, 30-39세, ...)
+    - 키: 10cm 단위 (150-159cm, 160-169cm, 170-179cm, ...)
+    - 몸무게: 10kg 단위 (40-49kg, 50-59kg, 60-69kg, ...)
+
+    ## 기술적 요구사항:
+
+    - matplotlib 사용하여 히스토그램 생성
+    - 3개의 서브플롯으로 각 변수 표시
+    - 각 히스토그램에 구간 범위를 명확히 표시
+
+## Prompt: Higher Level Language
+
+Prompt > C/C++ > Assembly > Machine Code > ...
+
+## Higher Level Language
+
+Natural language rather than programming language
+
+* Clear specification = Requirements definition
+* Providing examples = Test cases
+* Step-by-step explanation = Algorithm decomposition
+* Context management = Task decomposition
 
 ## Software Crisis
 
@@ -50,14 +86,7 @@ Complexity.
 From the Ice Age to Machine Learning, Deep Learning, and recently
 Generative AI.
 
-## Higher Level Language
-
-Natural language rather than programming language
-
-* Clear specification = Requirements definition
-* Providing examples = Test cases
-* Step-by-step explanation = Algorithm decomposition
-* Context management = Task decomposition
+## Bi Centennial Man
 
 ## Knuth's Literate Programming
 
@@ -89,7 +118,6 @@ y = 1 + "hello";   // AI can make code accept assignments we don't intend.
 
 ##  Requirements, Design, and Test
 
-
 ## Iterate "Divide and Conquer
 
 * Implementation Specification
@@ -98,6 +126,19 @@ y = 1 + "hello";   // AI can make code accept assignments we don't intend.
 ## Memory Bank
 
 Remember where you are.
+
+```{.mermaid loc=generated}
+flowchart TD
+    PB[projectbrief.md] --> PC[productContext.md]
+    PB --> SP[systemPatterns.md]
+    PB --> TC[techContext.md]
+
+    PC --> AC[activeContext.md]
+    SP --> AC
+    TC --> AC
+
+    AC --> P[progress.md]
+```
 
 ## How to Master AI Coding
 
