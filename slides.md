@@ -146,7 +146,7 @@ printf("Greetings ... to\n"); /* Hello, */
 
 다양한 AI 코딩 어시스턴트가 일관된 품질과 스타일로 작업할 수 있도록 종합적인 instruction 시스템을 제공합니다.
 
-* 참고 프로젝트: [Arith Lang](https://github.com/jaehwang/arith_lang)
+* 참고 프로젝트: [https://github.com/jaehwang/arith_lang](https://github.com/jaehwang/arith_lang)
 
 ### 디렉토리 구조
 
@@ -293,7 +293,7 @@ project_root/
 AI와 사람이 공유하기 쉬울 수록 AI와 사람의 협업이 촉진될 수 있다.
 
 이 슬라이드는 Markdown 문서를 PDF, HTML로 변환하여 만들어 졌다.
-[소스 코드](https://github.com/jaehwang/ai-se-talk)를 참고하라.
+[https://github.com/jaehwang/ai-se-talk](https://github.com/jaehwang/ai-se-talk)를 참고하라.
 
 ```Makefile
 slides.tex: slides.md template.tex
@@ -315,7 +315,7 @@ slides.pdf: slides.tex
 > "AI를 도구가 아니라 팀메이트로 대하세요."
 >
 > - 제레미 어틀리 교수, 스탠포드 대학교  
-> [출처: YouTube](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
+> [출처: YouTube https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
 :::
 ::::::::::::::
 
