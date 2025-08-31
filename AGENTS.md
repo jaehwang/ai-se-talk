@@ -12,7 +12,6 @@ The project uses a Makefile-based build system with the following key targets:
 
 ### Primary Commands
 - `make` or `make all` - Builds all slide formats (HTML and PDF)
-- `make slides.revealjs.html` - Creates reveal.js HTML presentation
 - `make slides.pdf` - Creates PDF slides via LaTeX/Beamer
 - `make clean` - Removes all generated files and temporary artifacts
 
@@ -20,6 +19,10 @@ The project uses a Makefile-based build system with the following key targets:
 - **pandoc** - Document converter (core requirement)
 - **mermaid-filter** - NPM package for diagram support (`npm install --global mermaid-filter`)
 - **xelatex** - LaTeX engine for PDF generation
+
+## Commit Guidelines
+
+AI must follow the commit message writing guidelines in rules/commit-log.md file.
 
 ## Architecture
 
@@ -29,8 +32,8 @@ The project uses a Makefile-based build system with the following key targets:
 - `images/` - Static assets (cover images, diagrams)
 
 ### Build Pipeline
-1. **HTML Output**: `slides.md` → pandoc (reveal.js) → `slides.revealjs.html`
-2. **PDF Output**: `slides.md` → pandoc (beamer) → `slides.tex` → xelatex → `slides.pdf`
+
+`slides.md` → pandoc (beamer) → `slides.tex` → xelatex → `slides.pdf`
 
 ### Key Features
 - Mermaid diagram support via mermaid-filter

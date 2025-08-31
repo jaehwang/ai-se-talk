@@ -1,17 +1,25 @@
 SLIDES=slides.revealjs.html slides.pdf
 
 FILTER=--filter mermaid-filter
+SLIDE_LEVEL=--slide-level=3 
+TOC=--toc=true -V toc-title="Table of Contents"
+
+OPTS=${FILTER} ${SLIDE_LEVEL} ${TOC}
 
 all: ${SLIDES}
 
 slides.revealjs.html: slides.md
-	pandoc -t revealjs -s ${FILTER} -o $@ -V theme=moon slides.md
+	pandoc ${OPTS} -t revealjs -s -o $@ -V theme=moon slides.md
 
 slides.tex: slides.md template.tex
-	pandoc -t beamer ${FILTER} -V theme:Berlin --template=template.tex --pdf-engine=xelatex -o $@ slides.md
+	pandoc ${OPTS} -t beamer -V theme:Berlin --template=template.tex --pdf-engine=xelatex -o $@ slides.md
 
 slides.pdf: slides.tex
-	xelatex slides.tex
+	xelatex slides.tex; \
+	if grep -q "Label(s) may have changed\|Rerun to get cross-references right" slides.log; then \
+		echo "Cross-reference warning detected, running xelatex again..."; \
+		xelatex slides.tex; \
+	fi
 
 clean:
 	rm -f ${SLIDES} 
