@@ -1,4 +1,4 @@
-SLIDES=slides.revealjs.html slides.pdf
+SLIDES=slides.html slides.pdf
 
 FILTER=--filter mermaid-filter
 SLIDE_LEVEL=--slide-level=3 
@@ -8,10 +8,12 @@ OPTS=${FILTER} ${SLIDE_LEVEL} ${TOC}
 
 all: ${SLIDES}
 
-slides.revealjs.html: slides.md
+slides.html: slides.md
+	@[ -d generated ] || mkdir -p generated
 	pandoc ${OPTS} -t revealjs --embed-resources --standalone -o $@ -V theme=moon slides.md
 
 slides.tex: slides.md template.tex
+	@[ -d generated ] || mkdir -p generated
 	pandoc ${OPTS} -t beamer -V theme:Berlin --template=template.tex --pdf-engine=xelatex -o $@ slides.md
 
 slides.pdf: slides.tex
@@ -27,3 +29,4 @@ clean:
 		slides.snm slides.toc slides.vrb
 	rm -f mermaid-filter.err
 	rm -f template.fdb_latexmk template.fls template.log template.aux
+	rm -rf generated
