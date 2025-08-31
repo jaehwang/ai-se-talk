@@ -110,11 +110,10 @@ Handling complexity.
 
 ## Knuth's Literate Programming
 
-"Programs are meant to be read by humans and only incidentally for computers to execute."
+_"Programs are meant to be read by humans and only incidentally for computers to execute."_
 
 ```cweb
-main()
-{
+main() {
   @<Print a greeting@>;
 }
 
