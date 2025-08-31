@@ -292,6 +292,9 @@ project_root/
 
 AI와 사람이 공유하기 쉬울 수록 AI와 사람의 협업이 촉진될 수 있다.
 
+이 슬라이드는 Markdown 문서를 PDF, HTML로 변환하여 만들어 졌다.
+[소스 코드](https://github.com/jaehwang/ai-se-talk)를 참고하라.
+
 ```Makefile
 slides.tex: slides.md template.tex
 	pandoc -t beamer ${FILTER} -V theme:Berlin \
