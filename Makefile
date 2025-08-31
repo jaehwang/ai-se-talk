@@ -9,7 +9,7 @@ OPTS=${FILTER} ${SLIDE_LEVEL} ${TOC}
 all: ${SLIDES}
 
 slides.revealjs.html: slides.md
-	pandoc ${OPTS} -t revealjs -s -o $@ -V theme=moon slides.md
+	pandoc ${OPTS} -t revealjs --embed-resources --standalone -o $@ -V theme=moon slides.md
 
 slides.tex: slides.md template.tex
 	pandoc ${OPTS} -t beamer -V theme:Berlin --template=template.tex --pdf-engine=xelatex -o $@ slides.md

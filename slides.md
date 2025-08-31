@@ -13,6 +13,17 @@ header-includes:
     .reveal h1 { font-size: 2.5em; }
     .reveal h2 { font-size: 2.11em; }
     .reveal h3 { font-size: 1.55em; }
+    /* 목차 스타일 */
+    .reveal #TOC ul {
+        font-size: 0.8em;
+        line-height: 1.2;
+        column-count: 2;
+        column-gap: 2em;
+    }
+    .reveal #TOC li {
+        break-inside: avoid;
+        margin-bottom: 0.3em;
+    }
     </style>
     ```
     ```{=latex}
