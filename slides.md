@@ -19,13 +19,21 @@ header-includes:
     \usepackage{kotex}
     \usebackgroundtemplate{%
       \ifnum\thepage=1%
-        \includegraphics[width=\paperwidth,height=\paperheight]{images/cover.jpg}%
+        \includegraphics[width=\paperwidth,height=\paperheight]{images/cover2.jpg}%
       \else%
         % 다른 페이지는 기본 배경
       \fi
     }
     ```
 ---
+
+## AI v.s Human
+
+* _"Microsoft to Lay Off About 9,000 Employees"_
+   - New York Times. July 2025
+
+* _"You're not going to lose a job – your job to an AI, but you're going to lose your job to somebody who uses AI"_
+   - Jensen Huang, May 2025
 
 ## Problem: 요구 사항
 
@@ -43,16 +51,23 @@ header-includes:
 
 나이, 키, 몸무게 데이터를 입력받아서 각각의 히스토그램을 그리는 파이썬 프로그램을 작성해주세요.
 
-* 구간 요구사항:
+* 구간 요구사항
     - 나이: 10세 단위 (0-9세, 10-19세, 20-29세, 30-39세, ...)
     - 키: 10cm 단위 (150-159cm, 160-169cm, 170-179cm, ...)
     - 몸무게: 10kg 단위 (40-49kg, 50-59kg, 60-69kg, ...)
-* 기술적 요구사항:
+* 기술적 요구사항
     - matplotlib 사용하여 히스토그램 생성
     - 각 히스토그램에 구간 범위를 명확히 표시
-* Test Cases:
+* Test Cases
     - ...
-  
+
+## 좋은 프롬프트 작성 방법
+
+* Clear specification = Requirements definition
+* Providing examples = Test cases
+* Step-by-step explanation = Algorithm decomposition
+* Context management = Task decomposition
+
 ## Prompt: Higher Level Language?
 
 - Prompt
@@ -78,38 +93,20 @@ header-includes:
 
 > The major cause of the software crisis is that the machines
 > have become several orders of magnitude more powerful!
-> To put it quite bluntly: as long as there were no machines,
-> programming was no problem at all; when we had a few
-> weak computers, programming became a mild problem,
+> ...
 > and now we have gigantic computers, programming has
 > become an equally gigantic problem.
 >
-> Edsger Dijkstra. The Humble Programmer. 1972
+> Edsger Dijkstra, The Humble Programmer. 1972
 
 ## Software Engineering
 
-Complexity.
+Handling complexity.
 
 * Software Process: Analysis, design, coding, testing, maintenance
 * Software Architecture: Bridge between requirements and implementation
 * Agile Practices: CI/CD
 * ...
-
-## 좋은 프롬프트 작성 방법
-
-Natural language rather than programming language
-
-* Clear specification = Requirements definition
-* Providing examples = Test cases
-* Step-by-step explanation = Algorithm decomposition
-* Context management = Task decomposition
-
-## AI for Software Engineering
-
-From the Ice Age to Machine Learning, Deep Learning, and recently
-Generative AI.
-
-## Bi Centennial Man
 
 ## Knuth's Literate Programming
 
@@ -130,21 +127,12 @@ printf("Greetings ... to\n"); /* Hello, */
 #include <stdio.h>
 ```
 
-## Test가 마지막 보루
+## Requirements, Design, Test, and Tasks
 
-Spec: Assignment `var = expression`
-
-```
-x = 1;             // OK
-y = 1 + "hello";   // AI can make code accept assignments we don't intend.
-```
-
-##  Requirements, Design, and Test
-
-## Iterate "Divide and Conquer
-
+* 요구 사항, 설계, 테스트를 포함한 명세서를 작성
 * Implementation Specification
-* Plan with sub tasks
+    - Iterate "Divide and Conquer" 
+    - Plan with sub tasks
 
 ## Memory Bank
 
@@ -163,65 +151,30 @@ flowchart TD
     AC --> P[progress.md]
 ```
 
-## How to Master AI Coding
+## AI for Software Engineering
 
-Effective prompting strategies for better code generation
+From the Ice Age to Machine Learning, Deep Learning, and recently
+Generative AI.
 
-## 1. Be Specific and Clear
+## Test가 마지막 보루
 
-**Bad**: "Make a function"
+Spec: Assignment `var = expression`
 
-**Good**: "Create a Python function that validates email addresses using regex and returns True/False"
-
-* Specify language, framework, and libraries
-* Define input/output types clearly
-* Mention error handling requirements
-
-## 2. Provide Context and Examples
-
-```python
-# Instead of just asking for a sorting function
-# Provide context:
-"""
-I need a function to sort a list of user objects by their
-registration date (datetime field). Handle None values
-by putting them at the end.
-
-Example input: [User(name="Alice", reg_date=datetime(2023,1,1)), 
-                User(name="Bob", reg_date=None)]
-"""
+```
+x = 1;             // OK
+y = 1 + "hello";   // AI can make code accept assignments we don't intend.
 ```
 
-## 3. Break Down Complex Tasks
+## Plain Text 
 
-Don't ask for an entire application at once
+AI와 사람이 공유하기 쉬울 수록 AI와 사람의 협업이 촉진될 수 있다.
 
-1. **Start small**: Individual functions or classes
-2. **Build incrementally**: Add features step by step
-3. **Test frequently**: Validate each component
-4. **Refactor**: Improve code quality iteratively
+```Makefile
+slides.tex: slides.md template.tex
+	pandoc -t beamer ${FILTER} -V theme:Berlin \
+      --template=template.tex --pdf-engine=xelatex 
+      -o $@ slides.md
 
-## 4. Leverage AI for Different Phases
-
-### Requirements Analysis
-* "Analyze this user story and suggest edge cases"
-* "What are potential security concerns for this feature?"
-
-### Design
-* "Suggest a class diagram for this problem"
-* "What design patterns would fit this scenario?"
-
-### Implementation
-* "Implement this algorithm with error handling"
-* "Convert this pseudocode to Python"
-
-### Testing
-* "Generate unit tests for this function"
-* "Create test data for edge cases"
-
-### Debugging
-* "Explain why this code throws an error"
-* "Suggest optimizations for this slow function"
-
-## 5. Iterative Refinement
-
+slides.pdf: slides.tex
+	xelatex slides.tex
+ ``` 
