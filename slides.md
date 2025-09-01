@@ -220,15 +220,12 @@ AI를 이용한 개발에서 큰 Task를 Sub Task로 나눠 진행하기 위한 
 
 ### 의도 이탈(Drift) 문제
 
-**AI Coding의 도전 과제:**
-
-- Keeping agents on track through long, complex tasks
-
-**Drift 예시 - Context 크기 제약:**
-
-- 초기 목표: "대규모 레거시 코드베이스에 새 기능 추가"
-- 문제: 전체 코드베이스가 AI 컨텍스트 윈도우를 초과
-- 결과: AI가 부분적 정보로 작업하다 기존 아키텍처와 불일치하는 코드 생성
+* **AI Coding의 도전 과제:**
+    - Keeping agents on track through long, complex tasks
+* **Drift 예시 - Context 크기 제약:**
+    - 초기 목표: "대규모 레거시 코드베이스에 새 기능 추가"
+    - 문제: 전체 코드베이스가 AI 컨텍스트 윈도우를 초과
+    - 결과: AI가 부분적 정보로 작업하다 기존 아키텍처와 불일치하는 코드 생성
 
 ### 핵심 원칙
 
@@ -285,20 +282,17 @@ project_root/
 - 섀도잉 허용, 재할당은 타입 일치 강제
 - 정밀 진단 메시지
 
-### 실전 사례: 계획 수립
+### 실전 사례: 작업 계획
 
-**.github/prompts/deep-planning.prompt.md**를 GitHub Copilot에서 활용:
+1. **.github/prompts/deep-planning.prompt.md**를 GitHub Copilot에서 활용:
 
-```
-/deep-planning specs/functions.md 문서를 바탕으로 
-구현 계획을 만들어 줘.
-```
+        /deep-planning specs/functions.md 문서를 바탕으로 
+        구현 계획을 만들어 줘.
 
-→ `plans/function-implementation-plan.md` 생성
+    - → `plans/function-implementation-plan.md` 생성
 
-**plans/mut-implementation-plan.md**의 구현 순서에 따라 구현, 검증 수행:
-
-- 5단계 구현 순서: mut 플래그 → Symbol 구조체 → 타입 검사 → 에러 메시지
+2. **plans/mut-implementation-plan.md**의 구현 순서에 따라 구현, 검증 수행:
+    - 5단계 구현 순서: mut 플래그 → Symbol 구조체 → 타입 검사 → 에러 메시지
 
 ## Epilogue
 
