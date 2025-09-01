@@ -22,6 +22,10 @@ npm install --global mermaid-filter
 # macOS에서 pandoc과 LaTeX 설치
 brew install pandoc
 brew install --cask mactex
+
+# Linux에서 pandoc과 LaTeX 설치
+brew install pandoc
+brew install texlive
 ```
 
 ## 사용법
