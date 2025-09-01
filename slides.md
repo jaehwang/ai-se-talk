@@ -1,5 +1,6 @@
 ---
-title: AI와 Software 개발 협업 하기
+title: AI 협업을 통한 소프트웨어 개발
+subtitle: 속도와 완벽, 둘 다 잡는 기술
 author: 김재황
 date: 2025년 9월 3일
 paginate: true
@@ -138,15 +139,15 @@ Handling complexity.
 _"Programs are meant to be read by humans and only incidentally for computers to execute."_
 
 ```cweb
+@<Include files@>=
 main() {
   @<Print a greeting@>;
 }
-
 @<Print a greeting@>=
 printf("Greetings ... to\n"); /* Hello, */
-
-@ Since we're using the |printf| routine, we had better include the standard input/output header file.
-
+@ Since we're using the |printf| routine,
+@ we had better include the standard input/output 
+@ header file.
 @<Include files@>=
 #include <stdio.h>
 ```
@@ -155,7 +156,7 @@ printf("Greetings ... to\n"); /* Hello, */
 
 다양한 AI 코딩 어시스턴트가 일관된 품질과 스타일로 작업할 수 있도록 종합적인 instruction 시스템을 제공합니다.
 
-* 참고 프로젝트: [https://github.com/jaehwang/arith_lang](https://github.com/jaehwang/arith_lang)
+* 참고 프로젝트: [Link](https://github.com/jaehwang/arith_lang)
 
 ### 디렉토리 구조
 
@@ -302,7 +303,7 @@ project_root/
 AI와 사람이 공유하기 쉬울 수록 AI와 사람의 협업이 촉진될 수 있다.
 
 이 슬라이드는 Markdown 문서를 PDF, HTML로 변환하여 만들어 졌다.
-[https://github.com/jaehwang/ai-se-talk](https://github.com/jaehwang/ai-se-talk)를 참고하라.
+[Link](https://github.com/jaehwang/ai-se-talk)를 참고하라.
 
 ```Makefile
 slides.tex: slides.md template.tex
@@ -324,7 +325,7 @@ slides.pdf: slides.tex
 > "AI를 도구가 아니라 팀메이트로 대하세요."
 >
 > - 제레미 어틀리 교수, 스탠포드 대학교  
-> [출처: YouTube https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
+> 출처: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
 :::
 ::::::::::::::
 
