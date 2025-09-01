@@ -154,7 +154,7 @@ printf("Greetings ... to\n"); /* Hello, */
 
 ## AI Agent 길들이기
 
-다양한 AI 코딩 어시스턴트가 일관된 품질과 스타일로 작업할 수 있도록 종합적인 instruction 시스템을 제공합니다.
+다양한 AI 코딩 어시스턴트가 일관된 품질과 스타일로 작업할 수 있도록 종합적인 instruction 시스템을 제공
 
 * 참고 프로젝트: [Link](https://github.com/jaehwang/arith_lang)
 
@@ -300,10 +300,9 @@ project_root/
 
 ### AI와 협업: Plain Text
 
-AI와 사람이 공유하기 쉬울 수록 AI와 사람의 협업이 촉진될 수 있다.
-
-이 슬라이드는 Markdown 문서를 PDF, HTML로 변환하여 만들어 졌다.
-[Link](https://github.com/jaehwang/ai-se-talk)를 참고하라.
+- AI와 사람이 공유하기 쉬울 수록 AI와 사람의 협업이 촉진될 수 있음
+- 이 슬라이드는 Markdown 문서를 PDF, HTML로 변환하여 만들어 졌음
+    * [Link](https://github.com/jaehwang/ai-se-talk) 참고
 
 ```Makefile
 slides.tex: slides.md template.tex
