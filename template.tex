@@ -150,14 +150,15 @@ $endfor$
 $if(toc)$
 $if(toc-title)$
 \renewcommand*\contentsname{$toc-title$}
-$endif$
-\begin{frame}[allowframebreaks]
-$if(toc-title)$
-  \frametitle{$toc-title$}
+\begin{frame}{$toc-title$}
+$else$
+\begin{frame}
+  \frametitle{Table of Contents}
 $endif$
   \setcounter{tocdepth}{$toc-depth$}
   \tableofcontents
 \end{frame}
+
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
 

@@ -28,12 +28,21 @@ header-includes:
     ```
     ```{=latex}
     \usepackage{kotex}
+    \usepackage{zref-totpages}
     \usebackgroundtemplate{%
       \ifnum\thepage=1%
         \includegraphics[width=\paperwidth,height=\paperheight]{images/cover2.jpg}%
       \else%
-        % 다른 페이지는 기본 배경
-      \fi
+        \ifnum\thepage=2%
+          \includegraphics[width=\paperwidth,height=\paperheight]{images/toc_qna.jpg}%
+        \else%
+          \ifnum\thepage=\ztotpages%
+            \includegraphics[width=\paperwidth,height=\paperheight]{images/toc_qna.jpg}%
+          \else%
+            % 나머지 페이지 배경 미지정
+          \fi%
+        \fi%
+      \fi%
     }
     \setbeamertemplate{footline}[frame number]
     ```
