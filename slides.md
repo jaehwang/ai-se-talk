@@ -61,7 +61,7 @@ header-includes:
 
 ### Problem: 요구 사항
 
-나이, 키, 몸무게 데이터를 입력으로받아서 히스토그램을 출력한다.
+나이, 키, 몸무게 데이터를 입력으로 받아서 히스토그램을 출력한다.
 
 | 순번 | 이름   | 나이 | 키(cm) | 몸무게(kg) |
 |------|--------|------|--------|------------|
@@ -218,13 +218,17 @@ flowchart TD
 
 AI를 이용한 개발에서 큰 Task를 Sub Task로 나눠 진행하기 위한 효과적인 방법론
 
-### 핵심 도전: '의도 이탈(Drift)' 문제
+### 의도 이탈(Drift) 문제
 
-> AI Coding의 가장 큰 도전 과제:
->
-> Keeping agents on track through long, complex tasks.
+**AI Coding의 도전 과제:**
 
-여러 도구와 단계가 얽힌 대규모 작업에서 초기 의도에서 벗어나는 문제가 빈번히 발생
+- Keeping agents on track through long, complex tasks
+
+**Drift 예시 - Context 크기 제약:**
+
+- 초기 목표: "대규모 레거시 코드베이스에 새 기능 추가"
+- 문제: 전체 코드베이스가 AI 컨텍스트 윈도우를 초과
+- 결과: AI가 부분적 정보로 작업하다 기존 아키텍처와 불일치하는 코드 생성
 
 ### 핵심 원칙
 
