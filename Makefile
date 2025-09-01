@@ -8,6 +8,9 @@ OPTS=${FILTER} ${SLIDE_LEVEL} ${TOC}
 
 all: ${SLIDES}
 
+# Keep .tex files
+.PRECIOUS: %.tex
+
 # Pattern rules
 %.html: %.md
 	@[ -d generated ] || mkdir -p generated
