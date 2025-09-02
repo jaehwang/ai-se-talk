@@ -113,16 +113,17 @@ header-includes:
 ### AI 동료
 
 :::::::::::::: {.columns}
-::: {.column width="50%"}
+::: {.column width="60%"}
 ![AI Team Mate](images/ai_mate.jpg)
 :::
-::: {.column width="50%"}
-> "AI를 도구가 아니라 팀메이트로 대하세요."
->
-> - 제레미 어틀리 교수, 스탠포드 대학교  
-> 출처: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
+::: {.column width="40%"}
+"AI를 도구가 아니라 팀메이트로 대하세요."
 :::
 ::::::::::::::
+
+제레미 어틀리 교수, 스탠포드 대학교  
+
+* 출처: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
 
 ### Prompt: Higher Level Language?
 
