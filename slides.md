@@ -49,7 +49,25 @@ header-includes:
     ```
 ---
 
-## 생성형 AI의 도입 
+## 자기 소개
+
+### 고품질 소프트웨어를 저비용으로 만들자
+
+:::::::::::::: {.columns}
+::: {.column width="70%"}
+* 2020: VS본부 Engineering System개발
+* 2018: 연구위원
+* 2015: 전사 소프트웨어 아키텍트 프로그램
+* 2012: 전사 소프트웨어 협업 환경
+    - Collaboration Center: Collab, xLM, Harmony, Mod, ...
+* 2006: CTO부문 경력 입사
+:::
+::: {.column width="30%"}
+![Atlassian Summit 2012](images/atlas_lg.jpg)
+:::
+::::::::::::::
+
+## AI를 이용한 소프트웨어 개발
 
 ### AI v.s Human
 
@@ -92,6 +110,20 @@ header-includes:
 * Providing examples = Test cases
 * Context management = Task decomposition
 
+### AI 동료
+
+:::::::::::::: {.columns}
+::: {.column width="50%"}
+![AI Team Mate](images/ai_mate.jpg)
+:::
+::: {.column width="50%"}
+> "AI를 도구가 아니라 팀메이트로 대하세요."
+>
+> - 제레미 어틀리 교수, 스탠포드 대학교  
+> 출처: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
+:::
+::::::::::::::
+
 ### Prompt: Higher Level Language?
 
 - Prompt
@@ -102,13 +134,15 @@ header-includes:
 
 ## Software Engineering
 
-### Hollerith Tabulating System
+### Problem & Solution
+
+인구조사 집계 시간을 8년(1880년)에서 3년(1890년)으로 단축
 
 :::::::::::::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![1890: Hollerith Tabulating System](images/hh-tabulator.jpg)
 :::
-::: {.column width="50%"}
+::: {.column width="60%"}
 - 1896\. Tabulating Machine Company
 - 1911\. CTR (Computing Tabulating Recording Company)
 - 1924\. IBM (International Business Machines)
@@ -131,7 +165,7 @@ Handling complexity.
 
 * Software Process: Analysis, design, coding, testing, maintenance
 * Software Architecture: Bridge between requirements and implementation
-* Agile Practices: CI/CD
+* Agile Practices: Code review, unit test, CI/CD, ...
 * ...
 
 ### Knuth's Literate Programming
@@ -154,7 +188,7 @@ printf("Greetings ... to\n"); /* Hello, */
 
 ## AI Agent 길들이기
 
-다양한 AI 코딩 어시스턴트가 일관된 품질과 스타일로 작업할 수 있도록 종합적인 instruction 시스템을 제공
+AI 코딩 어시스턴트가 일관된 품질과 스타일로 작업할 수 있도록 종합적인 instruction 시스템을 제공해야 함
 
 * 참고 프로젝트: [Link](https://github.com/jaehwang/arith_lang)
 
@@ -162,17 +196,41 @@ printf("Greetings ... to\n"); /* Hello, */
 
 ```
 project_root/
-├── AGENTS.md                        # 메인 instruction
-├── CLAUDE.md                        # Claude Code
 ├── .github/
-│   ├── copilot-instructions.md      # GitHub Copilot
-│   └── prompts/
-│       └── deep-planning.prompt.md  # Deep Planning
+│   └── copilot-instructions.md      # GitHub Copilot
 ├── .clinerules/
 │   └── cline-instructions.md        # Cline 지침
+├── CLAUDE.md                        # Claude Code
+├── AGENTS.md                        # 메인 instruction
 ├── memory-bank/                     # 세션 간 연속성
 └── rules/                           # 코드 품질 규칙
 ```
+
+### .github/copilot-instructions.md
+
+```
+---
+applyTo: "**"
+---
+# Copilot Instructions
+
+You must follow instructions in AGENTS.md 
+when working with code in this repository.
+```
+
+### AGENTS.md
+
+
+    # AGENTS.md
+    ...
+    ## Project Overview
+    ...
+    ## Build System
+    ...
+    ## Commit Guidelines
+    ...
+    ## ARchitecture
+    ...
 
 ### Memory Bank 시스템
 
@@ -205,7 +263,6 @@ flowchart TD
 2. **코드 작업시**: anchor comments 규칙 적용
 3. **커밋 작업시**: commit message 가이드라인 준수
 4. **세션 간 연속성**: Memory Bank로 작업 진척과 컨텍스트 유지
-5. **복잡한 기능 구현시**: Deep Planning 수행
 
 ### 장점
 
@@ -214,9 +271,9 @@ flowchart TD
 * **확장성**: 새로운 AI 도구 추가시 AGENTS.md 참조만으로 통합 가능
 * **유지보수성**: 중앙집중식 규칙 관리로 일관된 업데이트 
 
-## AI 도구 협업: 대규모 작업 수행
+## AI 협업: 대규모 작업 수행
 
-AI를 이용한 개발에서 큰 Task를 Sub Task로 나눠 진행하기 위한 효과적인 방법론
+AI를 이용한 개발에서 큰 Task를 Sub Task로 나눠 진행하기 위한 효과적인 방법이 필요함
 
 ### 의도 이탈(Drift) 문제
 
@@ -229,11 +286,10 @@ AI를 이용한 개발에서 큰 Task를 Sub Task로 나눠 진행하기 위한 
 
 ### 핵심 원칙
 
-1. **단일 진실의 원천(SoT)**: 명세 파일을 최우선 참조
-2. **Sub Task**: 명세 기반 구현 가능한 작업 단위로 분할
-3. **단계 경계 = 커밋 경계**: 각 sub task마다 커밋
-4. **지속적 드리프트 감지**: 테스트로 명세 부합성 검증
-5. **명시적 범위 관리**: 핵심 기능 집중, 후순위 분리
+1. **단일 진실의 원천(SoT)**: 요구사항, 설계, 테스트를 포함한 명세
+2. **Sub Task**: 명세를 구현 가능한 작업 단위로 분할
+3. **지속적 드리프트 감지**: 구현과 테스트 반복
+4. **단계 경계 = 커밋 경계**: 각 sub task마다 커밋
 
 ### 디렉토리 구조
 
@@ -248,7 +304,27 @@ project_root/
 ├── tests/             # 테스트 코드
 ```
 
-### 전체 워크플로 개요
+### 사례(1/2): 변수 시스템 명세
+
+**specs/variables.md** (명세)
+
+- 불변(immutable-by-default), `mut`로 명시적 가변 선언
+- 섀도잉 허용, 재할당은 타입 일치 강제
+- 정밀 진단 메시지
+
+### 사례(2/2): 작업 계획
+
+1. **.github/prompts/deep-planning.prompt.md**를 GitHub Copilot에서 활용:
+
+        /deep-planning specs/functions.md 문서를 바탕으로 
+        구현 계획을 만들어 줘.
+
+    - → `plans/function-implementation-plan.md` 생성
+
+2. **plans/mut-implementation-plan.md**의 구현 순서에 따라 구현, 검증 수행:
+    - 5단계 구현 순서: mut 플래그 → Symbol 구조체 → 타입 검사 → 에러 메시지
+
+### 전체 워크플로 정리
 
 :::::::::::::: {.columns}
 ::: {.column width="33%"}
@@ -274,26 +350,6 @@ project_root/
 :::
 ::::::::::::::
 
-### 실전 사례: 변수 시스템 명세
-
-**specs/variables.md** (명세)
-
-- 불변(immutable-by-default), `mut`로 명시적 가변 선언
-- 섀도잉 허용, 재할당은 타입 일치 강제
-- 정밀 진단 메시지
-
-### 실전 사례: 작업 계획
-
-1. **.github/prompts/deep-planning.prompt.md**를 GitHub Copilot에서 활용:
-
-        /deep-planning specs/functions.md 문서를 바탕으로 
-        구현 계획을 만들어 줘.
-
-    - → `plans/function-implementation-plan.md` 생성
-
-2. **plans/mut-implementation-plan.md**의 구현 순서에 따라 구현, 검증 수행:
-    - 5단계 구현 순서: mut 플래그 → Symbol 구조체 → 타입 검사 → 에러 메시지
-
 ## Epilogue
 
 ### AI와 협업: Plain Text
@@ -311,19 +367,5 @@ slides.tex: slides.md template.tex
 slides.pdf: slides.tex
 	xelatex slides.tex
  ```
-
-### AI와 협업: 동료
-
-:::::::::::::: {.columns}
-::: {.column width="50%"}
-![AI Team Mate](images/ai_mate.jpg)
-:::
-::: {.column width="50%"}
-> "AI를 도구가 아니라 팀메이트로 대하세요."
->
-> - 제레미 어틀리 교수, 스탠포드 대학교  
-> 출처: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
-:::
-::::::::::::::
 
 ## Q&A
