@@ -50,7 +50,25 @@ header-includes:
     ```
 ---
 
-## Giới thiệu AI tạo sinh
+## Giới thiệu bản thân
+
+### Tạo ra phần mềm chất lượng cao với chi phí thấp
+
+:::::::::::::: {.columns}
+::: {.column width="70%"}
+* 2020: Phát triển Engineering System tại VS Company
+* 2018: Nhà nghiên cứu
+* 2015: Chương trình Kiến trúc sư phần mềm toàn công ty
+* 2012: Môi trường hợp tác phần mềm toàn công ty
+    - Collaboration Center: Collab, xLM, Harmony, Mod, ...
+* 2006: Gia nhập CTO với kinh nghiệm
+:::
+::: {.column width="30%"}
+![Atlassian Summit 2012](images/atlas_lg.jpg)
+:::
+::::::::::::::
+
+## Phát triển phần mềm sử dụng AI
 
 ### AI so với Con người
 
@@ -93,6 +111,21 @@ Hãy viết một chương trình Python nhận dữ liệu tuổi, chiều cao,
 * Providing examples = Test cases
 * Context management = Task decomposition
 
+### Đồng nghiệp AI
+
+:::::::::::::: {.columns}
+::: {.column width="60%"}
+![AI Team Mate](images/ai_mate.jpg)
+:::
+::: {.column width="40%"}
+"Hãy đối xử với AI như đồng đội, không phải như công cụ."
+:::
+::::::::::::::
+
+Giáo sư Jeremy Utley, Đại học Stanford  
+
+* Nguồn: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
+
 ### Prompt: Ngôn ngữ cấp cao hơn?
 
 - Prompt
@@ -103,13 +136,15 @@ Hãy viết một chương trình Python nhận dữ liệu tuổi, chiều cao,
 
 ## Kỹ thuật Phần mềm
 
-### Hệ thống Bảng tính Hollerith
+### Vấn đề & Giải pháp
+
+Rút ngắn thời gian thống kê dân số từ 8 năm (1880) xuống 3 năm (1890)
 
 :::::::::::::: {.columns}
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![1890: Hệ thống Bảng tính Hollerith](images/hh-tabulator.jpg)
 :::
-::: {.column width="50%"}
+::: {.column width="60%"}
 - 1896\. Tabulating Machine Company
 - 1911\. CTR (Computing Tabulating Recording Company)
 - 1924\. IBM (International Business Machines)
@@ -118,11 +153,11 @@ Hãy viết một chương trình Python nhận dữ liệu tuổi, chiều cao,
 
 ### Khủng hoảng Phần mềm
 
-> Nguyên nhân chính của khủng hoảng phần mềm là máy tính
-> đã trở nên mạnh mẽ hơn nhiều bậc!
+> The major cause of the software crisis is that the machines
+> have become several orders of magnitude more powerful!
 > ...
-> và giờ chúng ta có máy tính khổng lồ, lập trình đã
-> trở thành một vấn đề khổng lồ tương ứng.
+> and now we have gigantic computers, programming has
+> become an equally gigantic problem.
 >
 > - Edsger Dijkstra, The Humble Programmer. 1972
 
@@ -132,7 +167,7 @@ Xử lý độ phức tạp.
 
 * Quy trình Phần mềm: Phân tích, thiết kế, lập trình, kiểm thử, bảo trì
 * Kiến trúc Phần mềm: Cầu nối giữa yêu cầu và triển khai
-* Thực hành Agile: CI/CD
+* Thực hành Agile: Code review, unit test, CI/CD, ...
 * ...
 
 ### Lập trình Văn xuôi của Knuth
@@ -163,17 +198,41 @@ Cung cấp hệ thống hướng dẫn toàn diện để các AI coding assista
 
 ```
 project_root/
-├── AGENTS.md                        # Hướng dẫn chính
-├── CLAUDE.md                        # Claude Code
 ├── .github/
-│   ├── copilot-instructions.md      # GitHub Copilot
-│   └── prompts/
-│       └── deep-planning.prompt.md  # Deep Planning
+│   └── copilot-instructions.md      # GitHub Copilot
 ├── .clinerules/
 │   └── cline-instructions.md        # Hướng dẫn Cline
+├── CLAUDE.md                        # Claude Code
+├── AGENTS.md                        # Hướng dẫn chính
 ├── memory-bank/                     # Tính liên tục giữa các phiên
 └── rules/                           # Quy tắc chất lượng code
 ```
+
+### .github/copilot-instructions.md
+
+```
+---
+applyTo: "**"
+---
+# Copilot Instructions
+
+You must follow instructions in AGENTS.md 
+when working with code in this repository.
+```
+
+### AGENTS.md
+
+
+    # AGENTS.md
+    ...
+    ## Project Overview
+    ...
+    ## Build System
+    ...
+    ## Commit Guidelines
+    ...
+    ## ARchitecture
+    ...
 
 ### Hệ thống Memory Bank
 
@@ -206,7 +265,6 @@ flowchart TD
 2. **Khi làm việc với code**: Áp dụng quy tắc anchor comments
 3. **Khi commit**: Tuân thủ hướng dẫn commit message
 4. **Tính liên tục giữa các phiên**: Duy trì tiến độ và ngữ cảnh thông qua Memory Bank
-5. **Khi triển khai tính năng phức tạp**: Thực hiện Deep Planning
 
 ### Lợi ích
 
@@ -230,11 +288,10 @@ Phương pháp hiệu quả để chia Task lớn thành Sub Task trong phát tr
 
 ### Nguyên tắc Cốt lõi
 
-1. **Nguồn Sự thật Duy nhất (SoT)**: Ưu tiên tham khảo tệp đặc tả
-2. **Sub Task**: Chia thành các đơn vị công việc có thể triển khai dựa trên đặc tả
-3. **Ranh giới giai đoạn = Ranh giới commit**: Mỗi sub task một commit
-4. **Phát hiện drift liên tục**: Kiểm tra sự phù hợp với đặc tả qua test
-5. **Quản lý phạm vi rõ ràng**: Tập trung vào tính năng cốt lõi, tách biệt mức ưu tiên thấp
+1. **Nguồn Sự thật Duy nhất (SoT)**: Yêu cầu, thiết kế, kiểm thử bao gồm trong đặc tả
+2. **Sub Task**: Phân chia đặc tả thành các đơn vị công việc có thể triển khai
+3. **Phát hiện drift liên tục**: Lặp lại việc triển khai và kiểm thử
+4. **Ranh giới giai đoạn = Ranh giới commit**: Mỗi sub task một commit
 
 ### Cấu trúc Thư mục
 
@@ -287,15 +344,15 @@ project_root/
 
 1. **Sử dụng .github/prompts/deep-planning.prompt.md** trong GitHub Copilot:
 
-        /deep-planning Hãy tạo kế hoạch triển khai dựa trên 
-        tài liệu specs/functions.md.
+        /deep-planning specs/functions.md 문서를 바탕으로 
+        구현 계획을 만들어 줘.
 
     - → Tạo `plans/function-implementation-plan.md`
 
 2. **Triển khai và xác minh theo thứ tự trong plans/mut-implementation-plan.md**:
     - 5 giai đoạn triển khai: mut flag → Symbol struct → kiểm tra kiểu → thông báo lỗi
 
-## Lời kết
+## Epilogue
 
 ### Hợp tác với AI: Plain Text
 
@@ -313,18 +370,4 @@ slides.pdf: slides.tex
 	xelatex slides.tex
  ```
 
-### Hợp tác với AI: Đồng nghiệp
-
-:::::::::::::: {.columns}
-::: {.column width="50%"}
-![AI Team Mate](images/ai_mate.jpg)
-:::
-::: {.column width="50%"}
-> "Hãy đối xử với AI như đồng đội, không phải như công cụ."
->
-> - Giáo sư Jeremy Utley, Đại học Stanford  
-> Nguồn: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
-:::
-::::::::::::::
-
-## Hỏi & Đáp
+## Q&A
