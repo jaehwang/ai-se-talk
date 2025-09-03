@@ -50,66 +50,48 @@ header-includes:
     ```
 ---
 
-## Giới thiệu bản thân
-
-### Tạo ra phần mềm chất lượng cao với chi phí thấp
-
-:::::::::::::: {.columns}
-::: {.column width="70%"}
-* 2020: Phát triển Engineering System tại VS Company
-* 2018: Nhà nghiên cứu
-* 2015: Chương trình Kiến trúc sư phần mềm toàn công ty
-* 2012: Môi trường hợp tác phần mềm toàn công ty
-    - Collaboration Center: Collab, xLM, Harmony, Mod, ...
-* 2006: Gia nhập CTO với kinh nghiệm
-:::
-::: {.column width="30%"}
-![Atlassian Summit 2012](images/atlas_lg.jpg)
-:::
-::::::::::::::
-
-## Phát triển phần mềm sử dụng AI
+## Phát triển phần mềm hỗ trợ bởi AI
 
 ### AI so với Con người
 
-* _"Microsoft sa thải khoảng 9.000 nhân viên"_
-   - New York Times. Tháng 7 năm 2025
+* _"Microsoft to Lay Off About 9,000 Employees"_
+   - New York Times. July 2025
 
-* _"Bạn sẽ không mất việc vì AI, nhưng bạn sẽ mất việc vào tay người biết sử dụng AI"_
-   - Jensen Huang, Tháng 5 năm 2025
+* _"You're not going to lose a job – your job to an AI, but you're going to lose your job to somebody who uses AI"_
+   - Jensen Huang, May 2025
 
 ### Vấn đề: Yêu cầu
 
-Nhận dữ liệu tuổi, chiều cao, cân nặng làm đầu vào và xuất ra biểu đồ histogram.
+Nhập dữ liệu tuổi, chiều cao và cân nặng và xuất ra biểu đồ histogram.
 
-| STT | Tên      | Tuổi | Chiều cao(cm) | Cân nặng(kg) |
-|-----|----------|------|---------------|--------------|
-| 1   | Kim Chulsoo | 25   | 175           | 72           |
-| 2   | Lee Younghee | 32   | 162           | 55           |
-| 3   | Park Minjun | 19   | 180           | 78           |
-| 4   | Choi Jieun | 28   | 158           | 52           |
-| 5   | Jung Daeho | 45   | 172           | 80           |
+| Số. | Tên | Tuổi | Chiều cao(cm) | Cân nặng(kg) |
+|-----|------|-----|------------|-----------|
+| 1   | Kim Chulsoo | 25 | 175 | 72 |
+| 2   | Lee Younghee | 32 | 162 | 55 |
+| 3   | Park Minjun | 19 | 180 | 78 |
+| 4   | Choi Jieun | 28 | 158 | 52 |
+| 5   | Jung Daeho | 45 | 172 | 80 |
 
 ### Giải pháp: Gen AI & Prompt
 
-Hãy viết một chương trình Python nhận dữ liệu tuổi, chiều cao, cân nặng và vẽ histogram cho từng loại dữ liệu.
+Hãy viết một chương trình Python nhận dữ liệu tuổi, chiều cao và cân nặng làm đầu vào và vẽ biểu đồ histogram cho từng loại dữ liệu.
 
-* Yêu cầu về khoảng
-    - Tuổi: theo đơn vị 10 tuổi (0-9 tuổi, 10-19 tuổi, 20-29 tuổi, 30-39 tuổi, ...)
-    - Chiều cao: theo đơn vị 10cm (150-159cm, 160-169cm, 170-179cm, ...)
-    - Cân nặng: theo đơn vị 10kg (40-49kg, 50-59kg, 60-69kg, ...)
-* Yêu cầu kỹ thuật
-    - Sử dụng matplotlib để tạo histogram
-    - Hiển thị rõ ràng phạm vi khoảng trên mỗi histogram
-* Test Cases
+* Yêu cầu biểu đồ
+    - Tuổi: khoảng cách 10 tuổi (0-9 tuổi, 10-19 tuổi, 20-29 tuổi, 30-39 tuổi, ...)
+    - Chiều cao: khoảng cách 10cm (150-159cm, 160-169cm, 170-179cm, ...)
+    - Cân nặng: khoảng cách 10kg (40-49kg, 50-59kg, 60-69kg, ...)
+* Thiết kế
+    - Sử dụng matplotlib để tạo biểu đồ histogram
+    - Hiển thị rõ ràng các khoảng giá trị trên từng biểu đồ histogram
+* Trường hợp kiểm thử
     - ...
 
-### Cách viết prompt tốt
+### Kỹ thuật viết Prompt tốt
 
-* Clear specification = Requirements definition
-* Step-by-step explanation = Algorithm decomposition
-* Providing examples = Test cases
-* Context management = Task decomposition
+* Đặc tả rõ ràng = Định nghĩa yêu cầu
+* Giải thích từng bước = Phân tách thuật toán
+* Cung cấp ví dụ = Trường hợp kiểm thử
+* Quản lý ngữ cảnh = Phân tách nhiệm vụ
 
 ### Đồng nghiệp AI
 
@@ -126,7 +108,7 @@ Giáo sư Jeremy Utley, Đại học Stanford
 
 * Nguồn: YouTube [Link](https://youtu.be/rSS5yM74zeo?si=oPMib-EkOBtdxFkg)
 
-### Prompt: Ngôn ngữ cấp cao hơn?
+### Prompt: Ngôn ngữ bậc cao hơn?
 
 - Prompt
 - Python, C/C++
@@ -138,11 +120,11 @@ Giáo sư Jeremy Utley, Đại học Stanford
 
 ### Vấn đề & Giải pháp
 
-Rút ngắn thời gian thống kê dân số từ 8 năm (1880) xuống 3 năm (1890)
+Giảm thời gian lập bảng thống kê dân số từ 8 năm (1880) xuống còn 3 năm (1890)
 
 :::::::::::::: {.columns}
 ::: {.column width="40%"}
-![1890: Hệ thống Bảng tính Hollerith](images/hh-tabulator.jpg)
+![1890: Hệ thống lập bảng Hollerith](images/hh-tabulator.jpg)
 :::
 ::: {.column width="60%"}
 - 1896\. Tabulating Machine Company
@@ -167,7 +149,7 @@ Xử lý độ phức tạp.
 
 * Quy trình Phần mềm: Phân tích, thiết kế, lập trình, kiểm thử, bảo trì
 * Kiến trúc Phần mềm: Cầu nối giữa yêu cầu và triển khai
-* Thực hành Agile: Code review, unit test, CI/CD, ...
+* Thực hành Agile: Đánh giá mã, kiểm thử đơn vị, CI/CD, ...
 * ...
 
 ### Lập trình Văn xuôi của Knuth
@@ -190,7 +172,7 @@ printf("Greetings ... to\n"); /* Hello, */
 
 ## Thuần hóa AI Agent
 
-Cung cấp hệ thống hướng dẫn toàn diện để các AI coding assistant khác nhau có thể làm việc với chất lượng và phong cách nhất quán
+Trợ lý lập trình AI cần hệ thống hướng dẫn toàn diện để có thể làm việc với chất lượng và phong cách nhất quán
 
 * Dự án tham khảo: [Link](https://github.com/jaehwang/arith_lang)
 
@@ -199,13 +181,13 @@ Cung cấp hệ thống hướng dẫn toàn diện để các AI coding assista
 ```
 project_root/
 ├── .github/
-│   └── copilot-instructions.md      # GitHub Copilot
+│   └── copilot-instructions.md  # GitHub Copilot
 ├── .clinerules/
-│   └── cline-instructions.md        # Hướng dẫn Cline
-├── CLAUDE.md                        # Claude Code
-├── AGENTS.md                        # Hướng dẫn chính
-├── memory-bank/                     # Tính liên tục giữa các phiên
-└── rules/                           # Quy tắc chất lượng code
+│   └── cline-instructions.md    # Hướng dẫn Cline
+├── CLAUDE.md                    # Claude Code
+├── AGENTS.md                    # Hướng dẫn chính
+├── memory-bank/                 # Tính liên tục giữa các phiên
+└── rules/                       # Quy tắc chất lượng mã
 ```
 
 ### .github/copilot-instructions.md
@@ -236,7 +218,7 @@ when working with code in this repository.
 
 ### Hệ thống Memory Bank
 
-Hệ thống tài liệu để đảm bảo tính liên tục giữa các phiên của AI agent:
+Hệ thống tài liệu để đảm bảo tính liên tục giữa các phiên làm việc của AI agent:
 
 ```{.mermaid loc=generated}
 flowchart TD
@@ -259,39 +241,39 @@ flowchart TD
 * **techContext.md**: Công nghệ sử dụng và thiết lập môi trường phát triển
 * **progress.md**: Trạng thái hiện tại và công việc còn lại
 
-### Quy trình làm việc với AI Agent
+### Quy trình sử dụng AI Agent
 
-1. **Khi bắt đầu phiên**: Kiểm tra tệp Memory Bank, kiểm tra tệp hướng dẫn
-2. **Khi làm việc với code**: Áp dụng quy tắc anchor comments
+1. **Khi bắt đầu phiên làm việc**: Kiểm tra tệp Memory Bank, kiểm tra tệp hướng dẫn
+2. **Trong quá trình làm việc với mã**: Áp dụng quy tắc anchor comments
 3. **Khi commit**: Tuân thủ hướng dẫn commit message
-4. **Tính liên tục giữa các phiên**: Duy trì tiến độ và ngữ cảnh thông qua Memory Bank
+4. **Tính liên tục giữa các phiên**: Duy trì tiến độ công việc và ngữ cảnh thông qua Memory Bank
 
 ### Lợi ích
 
-* **Tính nhất quán**: Đảm bảo chất lượng code giống nhau giữa nhiều AI agent
+* **Tính nhất quán**: Đảm bảo chất lượng mã giống nhau giữa nhiều AI agent
 * **Tính liên tục**: Duy trì ngữ cảnh giữa các phiên thông qua Memory Bank
-* **Khả năng mở rộng**: Khi thêm công cụ AI mới, chỉ cần tham khảo AGENTS.md để tích hợp
+* **Khả năng mở rộng**: Khi thêm công cụ AI mới, có thể tích hợp chỉ bằng cách tham khảo AGENTS.md
 * **Khả năng bảo trì**: Quản lý quy tắc tập trung để cập nhật nhất quán
 
-## Hợp tác công cụ AI: Thực hiện công việc quy mô lớn
+## Hợp tác AI: Thực hiện nhiệm vụ quy mô lớn
 
-Phương pháp hiệu quả để chia Task lớn thành Sub Task trong phát triển sử dụng AI
+Cần có phương pháp hiệu quả để chia nhỏ các nhiệm vụ lớn thành các nhiệm vụ con trong quá trình phát triển hỗ trợ bởi AI
 
-### Vấn đề Lệch ý định (Drift)
+### Vấn đề Lệch ý định
 
-* **Thách thức của AI Coding:**
-    - Giữ agents đúng hướng trong các nhiệm vụ dài và phức tạp
-* **Ví dụ về Drift - Giới hạn kích thước Context:**
+* **Thách thức trong AI Coding:**
+    - Giữ cho các agent đi đúng hướng qua các nhiệm vụ dài và phức tạp
+* **Ví dụ về Lệch ý định - Hạn chế kích thước ngữ cảnh:**
     - Mục tiêu ban đầu: "Thêm tính năng mới vào codebase legacy quy mô lớn"
-    - Vấn đề: Toàn bộ codebase vượt quá context window của AI
-    - Kết quả: AI làm việc với thông tin từng phần và tạo ra code không nhất quán với kiến trúc hiện tại
+    - Vấn đề: Toàn bộ codebase vượt quá cửa sổ ngữ cảnh của AI
+    - Kết quả: AI làm việc với thông tin không đầy đủ và tạo ra mã không nhất quán với kiến trúc hiện có
 
-### Nguyên tắc Cốt lõi
+### Nguyên tắc cốt lõi
 
-1. **Nguồn Sự thật Duy nhất (SoT)**: Yêu cầu, thiết kế, kiểm thử bao gồm trong đặc tả
-2. **Sub Task**: Phân chia đặc tả thành các đơn vị công việc có thể triển khai
-3. **Phát hiện drift liên tục**: Lặp lại việc triển khai và kiểm thử
-4. **Ranh giới giai đoạn = Ranh giới commit**: Mỗi sub task một commit
+1. **Nguồn thông tin duy nhất (SoT)**: Đặc tả bao gồm yêu cầu, thiết kế và kiểm thử
+2. **Nhiệm vụ con**: Chia nhỏ đặc tả thành các đơn vị công việc có thể triển khai
+3. **Phát hiện lệch ý định liên tục**: Lặp lại việc triển khai và kiểm thử
+4. **Ranh giới giai đoạn = Ranh giới commit**: Một commit cho mỗi nhiệm vụ con
 
 ### Cấu trúc Thư mục
 
@@ -300,13 +282,13 @@ project_root/
 ├── .github/
 │   ├── copilot-instructions.md      # GitHub Copilot
 │   └── prompts/
-│       └── deep-planning.prompt.md  # Deep Planning
-├── specs/             # SoT: yêu cầu, thiết kế, đặc tả test
-├── src/               # Source code
-├── tests/             # Test code
+│       └── deep-planning.prompt.md  # Lập kế hoạch sâu
+├── specs/             # SoT: yêu cầu, thiết kế, đặc tả kiểm thử
+├── src/               # Mã nguồn
+├── tests/             # Mã kiểm thử
 ```
 
-### Tổng quan Quy trình Tổng thể
+### Tổng quan quy trình
 
 :::::::::::::: {.columns}
 ::: {.column width="33%"}
@@ -314,51 +296,51 @@ project_root/
 
 - Tuân thủ quy tắc dự án
 - Chỉ định SoT (specs/)
-- Lập kế hoạch (plans/)
+- Thiết lập kế hoạch (plans/)
 :::
 ::: {.column width="33%"}
-**Vòng lặp Thực thi**
+**Vòng lặp thực thi**
 
-- Triển khai Sub Task
-- Viết và chạy test
-- Phát hiện và sửa drift
+- Triển khai nhiệm vụ con
+- Viết và chạy kiểm thử
+- Phát hiện và khắc phục lệch ý định
 - Commit
 :::
 ::: {.column width="33%"}
-**Kết thúc**
+**Hoàn thành**
 
-- Regression test
-- Ghi chép thay đổi
+- Kiểm thử hồi quy
+- Ghi lại các thay đổi
 :::
 ::::::::::::::
 
-### Ví dụ Thực tế: Đặc tả Hệ thống Biến
+### Nghiên cứu tình huống (1/2): Đặc tả hệ thống biến
 
 **specs/variables.md** (đặc tả)
 
-- Bất biến (immutable-by-default), khai báo biến đổi rõ ràng với `mut`
-- Cho phép shadowing, tái gán ép buộc kiểu phù hợp
+- Bất biến theo mặc định, khai báo có thể thay đổi rõ ràng với `mut`
+- Cho phép shadowing, tái gán thực thi khớp kiểu
 - Thông báo chẩn đoán chính xác
 
-### Ví dụ Thực tế: Kế hoạch Công việc
+### Nghiên cứu tình huống (2/2): Lập kế hoạch công việc
 
 1. **Sử dụng .github/prompts/deep-planning.prompt.md** trong GitHub Copilot:
 
-        /deep-planning specs/functions.md 문서를 바탕으로 
-        구현 계획을 만들어 줘.
+        /deep-planning Tạo kế hoạch triển khai dựa trên 
+        tài liệu specs/variables.md.
 
-    - → Tạo `plans/function-implementation-plan.md`
+    - → Tạo `plans/mut-implementation-plan.md`
 
 2. **Triển khai và xác minh theo thứ tự trong plans/mut-implementation-plan.md**:
-    - 5 giai đoạn triển khai: mut flag → Symbol struct → kiểm tra kiểu → thông báo lỗi
+    - Chuỗi triển khai 4 giai đoạn: xử lý token `mut` → mở rộng Bảng ký hiệu → kiểm tra kiểu → thông báo lỗi
 
-## Epilogue
+## Kết luận
 
-### Hợp tác với AI: Plain Text
+### Hợp tác AI: Plain Text
 
-- Càng dễ chia sẻ giữa AI và con người thì càng thúc đẩy sự hợp tác giữa AI và con người
-- Slide này được tạo bằng cách chuyển đổi tài liệu Markdown thành PDF, HTML
-    * Tham khảo [Link](https://github.com/jaehwang/ai-se-talk)
+- Càng dễ chia sẻ giữa AI và con người, càng có thể thúc đẩy hợp tác AI-con người
+- Các slide này được tạo bằng cách chuyển đổi tài liệu Markdown thành PDF và HTML
+    * Xem [Link](https://github.com/jaehwang/ai-se-talk)
 
 ```Makefile
 slides.tex: slides.md template.tex

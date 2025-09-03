@@ -18,6 +18,15 @@ slides.vn.snm
 slides.vn.toc
 slides.vn.vrb
 slides.vn.html
+slides.en.tex
+slides.en.aux
+slides.en.log
+slides.en.nav
+slides.en.pdf
+slides.en.snm
+slides.en.toc
+slides.en.vrb
+slides.en.html
 template.fdb_latexmk
 template.fls
 template.log

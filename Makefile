@@ -1,4 +1,4 @@
-SLIDES=slides.html slides.pdf slides.vn.html slides.vn.pdf
+SLIDES=slides.html slides.pdf slides.vn.html slides.vn.pdf slides.en.html slides.en.pdf
 
 FILTER=--filter mermaid-filter
 SLIDE_LEVEL=--slide-level=3 
@@ -33,6 +33,8 @@ clean:
 		slides.snm slides.toc slides.vrb
 	rm -f slides.vn.tex slides.vn.aux slides.vn.log slides.vn.nav \
 		slides.vn.snm slides.vn.toc slides.vn.vrb
+	rm -f slides.en.tex slides.en.aux slides.en.log slides.en.nav \
+		slides.en.snm slides.en.toc slides.en.vrb
 	rm -f mermaid-filter.err
 	rm -f template.fdb_latexmk template.fls template.log template.aux
 	rm -rf generated
