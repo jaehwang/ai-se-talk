@@ -317,13 +317,13 @@ project_root/
 
 1. **.github/prompts/deep-planning.prompt.md**를 GitHub Copilot에서 활용:
 
-        /deep-planning specs/functions.md 문서를 바탕으로 
+        /deep-planning specs/variables.md 문서를 바탕으로 
         구현 계획을 만들어 줘.
 
-    - → `plans/function-implementation-plan.md` 생성
+    - → `plans/mut-implementation-plan.md` 생성
 
 2. **plans/mut-implementation-plan.md**의 구현 순서에 따라 구현, 검증 수행:
-    - 5단계 구현 순서: mut 플래그 → Symbol 구조체 → 타입 검사 → 에러 메시지
+    - 4단계 구현 순서: `mut` 토큰 처리  → Symbol Table 확장 → 타입 검사 → 에러 메시지
 
 ### 전체 워크플로 정리
 
