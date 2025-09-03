@@ -300,7 +300,8 @@ project_root/
 1. **Using .github/prompts/deep-planning.prompt.md** in GitHub Copilot:
 
         /deep-planning Create an implementation plan based on 
-        specs/variables.md document.
+        specs/variables.md document and save in 
+        plans/mut-implementation-plan.md file.
 
     - → Generate `plans/mut-implementation-plan.md`
 

@@ -327,7 +327,8 @@ project_root/
 1. **Sử dụng .github/prompts/deep-planning.prompt.md** trong GitHub Copilot:
 
         /deep-planning Tạo kế hoạch triển khai dựa trên 
-        tài liệu specs/variables.md.
+        tài liệu specs/variables.md và lưu vào 
+        tệp plans/mut-implementation-plan.md.
 
     - → Tạo `plans/mut-implementation-plan.md`
 

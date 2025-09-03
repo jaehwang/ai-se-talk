@@ -318,7 +318,8 @@ project_root/
 1. **.github/prompts/deep-planning.prompt.md**를 GitHub Copilot에서 활용:
 
         /deep-planning specs/variables.md 문서를 바탕으로 
-        구현 계획을 만들어 줘.
+        구현 계획을 만들어서 plans/mut-implementation-plan.md
+        파일에 저장해 줘.
 
     - → `plans/mut-implementation-plan.md` 생성
 
