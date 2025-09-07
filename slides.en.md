@@ -1,8 +1,8 @@
 ---
 title: AI-Powered Software Development
 subtitle: Technology for Both Speed and Perfection
-author: Kim Jaehwang
-date: September 3, 2025
+author: Jaehwang Kim
+date: September 8, 2025
 paginate: true
 header-includes:
   - |
@@ -251,7 +251,7 @@ flowchart TD
 
 * **Consistency**: Ensure same code quality across multiple AI agents
 * **Continuity**: Maintain context across sessions through Memory Bank
-* **Scalability**: When adding new AI tools, integration possible by just referencing AGENTS.md
+* **Adaptation**: When adding new AI tools, integration possible by just referencing AGENTS.md
 * **Maintainability**: Centralized rule management for consistent updates
 
 ## AI Collaboration: Large-Scale Task Execution
@@ -300,8 +300,7 @@ project_root/
 1. **Using .github/prompts/deep-planning.prompt.md** in GitHub Copilot:
 
         /deep-planning Create an implementation plan based on 
-        specs/variables.md document and save in 
-        plans/mut-implementation-plan.md file.
+        specs/variables.md document.
 
     - → Generate `plans/mut-implementation-plan.md`
 
