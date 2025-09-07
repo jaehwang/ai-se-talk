@@ -27,26 +27,6 @@ header-includes:
     }
     </style>
     ```
-    ```{=latex}
-    \usepackage{kotex}
-    \usepackage{zref-totpages}
-    \usebackgroundtemplate{%
-      \ifnum\thepage=1%
-        \includegraphics[width=\paperwidth,height=\paperheight]{images/cover2.jpg}%
-      \else%
-        \ifnum\thepage=2%
-          \includegraphics[width=\paperwidth,height=\paperheight]{images/toc_qna.jpg}%
-        \else%
-          \ifnum\thepage=\ztotpages%
-            \includegraphics[width=\paperwidth,height=\paperheight]{images/toc_qna.jpg}%
-          \else%
-            % No background for other pages
-          \fi%
-        \fi%
-      \fi%
-    }
-    \setbeamertemplate{footline}[frame number]
-    ```
 ---
 
 ## AI-Powered Software Development
